@@ -1,0 +1,1 @@
+export const AWS_API = 'https://zx9hxosuol.execute-api.us-east-1.amazonaws.com/'
