@@ -21,20 +21,29 @@ export class UrlShorterComponent{
     this.urlForm = new FormControl('', [Validators.required]);
   }
 
-  submit() {
-    const urlToShorten = this.urlForm.value
+submit() {
+  if (this.urlForm.valid) {
+    const urlToShorten = this.urlForm.value;
+    const expirationTime = Date.now() + 432000000;
 
     const urlData: IUrlData = {
       originalUrl: urlToShorten,
-      expirationTime: `${Date.now() + 432000000}`
-    }    
-    
+      expirationTime: expirationTime.toString()
+    };
+
     this.shortener.generateShortenUrl(urlData).subscribe(
-      res => {
-        this.shortened = `${this.shortened}${res.code}`
-        this.isShortened = true
+      (res) => {
+        this.shortened = `${AWS_API}${res.code}`;
+        this.isShortened = true;
+        this.urlForm.patchValue('')
+      },
+      (error) => {
+        console.error('Error generating shortened URL:', error);
       }
-    )
+    );
+  } else {
+    console.error('Invalid URL');
   }
+}
 
 }

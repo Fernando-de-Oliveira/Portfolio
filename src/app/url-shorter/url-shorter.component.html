@@ -2,15 +2,19 @@
     <section class="url-container">
         <h3 class="title">Cole aqui o link que deseja encurtar.</h3>
         <div class="form-group">
-            <input type="text" id="urlForm" [formControl]="urlForm" name="urlForm">
+            <input type="text" 
+                   id="urlForm" 
+                   [formControl]="urlForm" 
+                   name="urlForm"
+                   placeholder="https://exemplo.com">
         </div>
         <button (click)="submit()">Enviar</button>
     </section>
     
     <section class="url-container-shortened" *ngIf="isShortened">
         <div class="d-flex">
-            <p class="url-description">Sua URL foi encurtada: </p>
-            <p class="url-shortened"> {{shortened}} </p>
+            <p class="url-description">Sua URL foi encurtada:</p>
+            <a target="_blank" [href]="shortened" class="url-shortened">{{shortened}}</a>
         </div>
     </section>
 </div>
