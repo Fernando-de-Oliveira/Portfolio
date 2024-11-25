@@ -1,0 +1,56 @@
+<section class="home">
+    <div class="hero">
+        <h2 class="title">Fernando Laurino</h2>
+        <p class="subtitle">Portfolio</p>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+    <div class="wrapper">
+        <div class="container project-card" (click)="openProjectDetails('url-shorter')">
+            <h3 class="project-title">Encurtador de URL</h3>
+            <app-url-shorter></app-url-shorter>
+        </div>
+        <div class="container project-card">
+            <!-- Futuro projeto aqui -->
+        </div>
+    </div>
+</section>
+
+<!-- Project Details Sidebar -->
+<div class="project-details-sidebar" [class.active]="isDetailsSidebarOpen">
+    <div class="sidebar-header">
+        <h2>{{ selectedProject?.title }}</h2>
+        <button class="close-btn" (click)="closeProjectDetails()">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="sidebar-content">
+        <div class="project-images">
+    <img *ngFor="let image of selectedProject?.images; let i = index" 
+         [src]="image" 
+         [alt]="selectedProject?.title" 
+         [style.object-fit]="i === 0 ? 'cover' : 'contain'">
+</div>
+        <div class="project-info">
+            <h3>Sobre o Projeto</h3>
+            <p>{{ selectedProject?.description }}</p>
+            
+            <h3>Tecnologias Utilizadas</h3>
+            <ul class="tech-stack">
+                <li *ngFor="let tech of selectedProject?.technologies">{{ tech }}</li>
+            </ul>
+            
+            <div class="project-links">
+                <a [href]="selectedProject?.githubUrl" target="_blank" *ngIf="selectedProject?.githubUrl">
+                    <i class="fab fa-github"></i> Código Fonte
+                </a>
+                <a [href]="selectedProject?.demoUrl" target="_blank" *ngIf="selectedProject?.demoUrl">
+                    <i class="fas fa-external-link-alt"></i> Demo
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sidebar-overlay" [class.active]="isDetailsSidebarOpen" (click)="closeProjectDetails()"></div>

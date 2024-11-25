@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 60vh;
     background-color: #121212; // Cor de fundo escura
     color: #ffffff; // Cor do texto clara
     padding: 20px;
@@ -11,10 +11,10 @@
 
 .url-container {
     background: #1e1e1e; // Cor de fundo do container
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    width: 100%;
+    width: 90%;
     max-width: 500px;
     margin-bottom: 20px;
 }
@@ -67,7 +67,7 @@ button {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    width: 100%;
+    width: 90%;
     max-width: 500px;
 }
 

@@ -16,7 +16,6 @@ export class UrlShorterComponent{
   urlForm: FormControl;
   shortened: string = AWS_API;
   isShortened: boolean = false;
-
   constructor(private shortener: ShortenerService){
     this.urlForm = new FormControl('', [Validators.required]);
   }

@@ -4,7 +4,11 @@ export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'url-shortener'
+        redirectTo: 'home'
+    },
+    {
+        path: 'home',
+        loadChildren: () => import("./pages/home/home.routes").then(m => m.URL_ROUTES)
     },
     {
         path: 'url-shortener',
