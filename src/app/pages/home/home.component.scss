@@ -71,6 +71,7 @@
     margin: 0 auto;
   }
 
+ 
   .project-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
@@ -126,20 +127,6 @@
   }
   60% {
     transform: translateY(-5px);
-  }
-}
-
-@media (max-width: 768px) {
-  .home {
-    .hero {
-      .title {
-        font-size: 3rem;
-      }
-      
-      .subtitle {
-        font-size: 1.2rem;
-      }
-    }
   }
 }
 
@@ -287,4 +274,27 @@
   &:hover {
     transform: translateY(-5px);
   }
+}
+
+@media (max-width: 768px) {
+
+ .home {
+  .wrapper{
+
+    grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+  }
+  .project-card {
+    padding: 1rem;
+  }
+  
+   .hero {
+     .title {
+       font-size: 3rem;
+     }
+     
+     .subtitle {
+       font-size: 1.2rem;
+     }
+   }
+ }
 }
