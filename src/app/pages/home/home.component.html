@@ -40,7 +40,7 @@
           <li *ngFor="let tech of selectedProject?.technologies">{{ tech }}</li>
         </ul>
   
-        <div class="project-links">
+        <div class="project-links" *ngIf="selectedProject?.githubUrl !== '/'">
           <a [href]="selectedProject?.githubUrl" target="_blank" *ngIf="selectedProject?.githubUrl">
             <i class="fab fa-github"></i> Código Fonte
           </a>
