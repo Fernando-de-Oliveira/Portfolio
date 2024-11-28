@@ -65,7 +65,7 @@
   .wrapper {
     padding: 4rem 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -88,6 +88,9 @@
       font-size: 1.5rem;
       margin-bottom: 1.5rem;
       color: #3498db;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -192,6 +195,9 @@
         width: 100%;
         border-radius: 8px;
         margin-bottom: 15px;
+        &.img-small{
+          max-width: 30vh;
+        }
       }
     }
 
@@ -271,7 +277,13 @@
 .project-card {
   cursor: pointer;
   transition: transform 0.3s ease;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    max-width: 100%;
+    max-height: 200px;
+  }
   &:hover {
     transform: translateY(-5px);
   }
