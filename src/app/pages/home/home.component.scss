@@ -460,7 +460,7 @@
 @media (max-width: 768px) {
 
   .projects {
-    height: unset;
+    height: 100vh;
     padding: 0 1rem;
     .title {
       margin: 2rem 0;
@@ -510,8 +510,10 @@
 
   .about-me {
     height: unset;
+    padding: 1rem;
+    z-index: 2;
     .wrapper{
-      padding: 1rem;
+      padding: 0 0 1rem;
       flex-direction: column-reverse;
       align-items: center;
       .text{
@@ -524,6 +526,9 @@
     }
     .whatido {
       padding: 1rem;
+      .title {
+        text-align: center;
+      }
       &-list {
         margin-top: 2rem;
         .card {
