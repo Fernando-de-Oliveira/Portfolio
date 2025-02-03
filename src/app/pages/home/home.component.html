@@ -1,4 +1,4 @@
-<section class="home">
+<section class="home container">
     <div class="hero">
       <h2 class="title">Fernando Laurino</h2>
       <p class="subtitle">Portfolio</p>
@@ -7,18 +7,40 @@
         <i class="fas fa-chevron-down"></i>
       </div>
     </div>
+  </section>
+  <section class="about-me container">
+    <h2 class="title">Sobre Mim</h2>
     <div class="wrapper">
-      <div 
-        class="container project-card" 
-        *ngFor="let project of projects" 
-        (click)="openProjectDetails(project.id)"
-      >
-        <h3 class="project-title">{{ project.title }}</h3>
-        <img [src]="project.images[0]" [alt]="project.title" />
+      <div class="text">
+        <p>
+          Sou um desenvolvedor front-end com mais de cinco anos de experiência na construção de aplicações web escaláveis e de alto desempenho. Minha principal especialização é em Angular, atuando no desenvolvimento de interfaces modernas e acessíveis, sempre alinhadas às melhores práticas do mercado.
+
+          Ao longo da minha trajetória, contribui para projetos relevantes no setor financeiro, incluindo o desenvolvimento de funcionalidades críticas para grandes instituições como Bradesco. Trabalhei em times que seguem metodologias ágeis, aplicando conceitos como SOLID, TDD, Pixel Perfect e CI/CD para garantir qualidade e eficiência no desenvolvimento.
+          
+          Tenho um olhar analítico e sou movido por desafios que exigem soluções bem estruturadas e código de qualidade. Busco constantemente aprimorar minhas habilidades e acompanhar as tendências do mercado para entregar produtos robustos e centrados na experiência do usuário.
+          
+          Se busca um profissional comprometido com performance, boas práticas e inovação, podemos conversar!
+        </p>
       </div>
+      <img src="assets/img/desktop.png" alt="">
     </div>
   </section>
-  
+<section class="projects container">
+  <h2 class="title">Projetos</h2>
+  <div class="wrapper">
+    <div 
+      class="container project-card" 
+      *ngFor="let project of projects" 
+      (click)="openProjectDetails(project.id)"
+    >
+    <img [src]="project.images[0]" [alt]="project.title" />
+    <h3 class="project-title">{{ project.title }}</h3>
+    </div>
+  </div>
+</section>
+<!-- <section class="technologies container">
+  <h2 class="title">Tecnologias</h2>
+</section> -->
   <!-- Project Details Sidebar -->
   <div class="project-details-sidebar" [class.active]="isDetailsSidebarOpen">
     <div class="sidebar-header">

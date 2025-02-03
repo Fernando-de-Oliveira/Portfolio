@@ -14,9 +14,10 @@ export const PROJECTS_DATA: ProjectDetails[] = [
     {
         id: 'dados-cadastrais',
         title: 'Dados Cadastrais - Bradesco',
-        description: 'Desenvolvimento do menu de Dados Cadastrais para o aplicativo do Bradesco, garantindo funcionalidades modernas e responsivas.',
+        description: 'Trabalhei no desenvolvimento do menu de Dados Cadastrais do aplicativo do Bradesco, usando Angular 16 e SASS para uma interface moderna e bem estilizada. Utilizando GitFlow para versionamento e CI/CD com Jenkins para automação de deploys. Escrita de testes unitários automatizados com Jest.',
         images: [
-            "assets/img/bradesco.jpg"
+            "assets/img/bradesco.jpg",
+            "assets/img/solutis-app.png"
         ],
         imgSize: 'small',
         technologies: [
@@ -30,27 +31,9 @@ export const PROJECTS_DATA: ProjectDetails[] = [
         demoUrl: '/'
     },
     {
-        id: 'extrato-bradesco',
-        title: 'Extrato - Banco Bradesco',
-        description: 'Desenvolvimento da seção de Extrato de um novo banco vinculado ao Bradesco. Utilizando Angular 13 e CI/CD para garantir desempenho e escalabilidade.',
-        images: [
-            "assets/img/bradesco.jpg"
-        ],
-        imgSize: 'small',
-        technologies: [
-            'Angular 13',
-            'SASS',
-            'CI/CD',
-            'Jest',
-            'GitFlow'
-        ],
-        githubUrl: '/',
-        demoUrl: '/'
-    },
-    {
         id: 'marketplace-skytech',
         title: 'MarketPlace SkyTech Solutions',
-        description: 'Criação e manutenção do marketplace SkyTech Solutions. Projeto desenvolvido com Angular 10 e SASS, aplicando conceitos de Pixel Perfect, SOLID e TDD para garantir alta qualidade e consistência.',
+        description: 'Criei e mantive o MarketPlace da SkyTech Solutions utilizando Angular 10 e SASS. No projeto, apliquei princípios de Pixel Perfect para precisão visual, SOLID para um código bem estruturado e TDD para assegurar a qualidade e confiabilidade do sistema desde o início.',
         images: [
             "assets/img/skytech.jpg"
         ],
@@ -67,9 +50,9 @@ export const PROJECTS_DATA: ProjectDetails[] = [
     {
         id: 'redesign-mip',
         title: 'Projeto MIP 3.0',
-        description: 'Redesign completo das aplicações internas da empresa IAUDIT, modernizando interfaces e otimizando a experiência do usuário.',
+        description: 'Redesign de todas as aplicações da empresa, criação de uma biblioteca com SASS que atendeu as necessidades dos projetos e transformou os layouts como um todo em aplicações simples, responsivas e User Friendly.',
         images: [
-            "assets/img/iaudit.png"
+            "assets/img/grupo_iaudit_logo.jpeg"
         ],
         imgSize: 'small',
         technologies: [
@@ -85,9 +68,9 @@ export const PROJECTS_DATA: ProjectDetails[] = [
     {
         id: 'galeria-page',
         title: 'Marketplace Galeria Pagé',
-        description: 'Desenvolvimento e manutenção do marketplace da Galeria Pagé, com funcionalidades robustas para gerenciar produtos e vendas.',
+        description: 'Tive a oportunidade de atuar sozinho construíndo o Front-End do sistema da central de transportadoras PageExpress, área logada para os encarregados emitirem etiquetas de envio e área comum para publico rastrear encomendas (API do correios). Construído com Angular 10, Docker, GitFlow, Typescript, estratégias de Pixel Perfect, CI/CD, e vivencia com SCRUM.',
         images: [
-            "assets/img/galeria-page.jpg"
+            "assets/img/1630530300774.jpeg"
         ],
         imgSize: 'small',
         technologies: [
@@ -100,12 +83,30 @@ export const PROJECTS_DATA: ProjectDetails[] = [
         githubUrl: '/',
         demoUrl: '/'
     },
-
     {
-        id: 'itmidia-projects',
-        title: 'Sistemas ITMidia',
-        description: 'Desenvolvimento de sistemas e plugins para a ITMidia, incluindo os sites ITTrends, ITFórum e oxfam.org.br.',
+        id: 'extrato-bradesco',
+        title: 'Extrato - Banco Bradesco',
+        description: 'Na CAPCO, desenvolvi a seção de Extrato para uma aplicação de um banco novo vinculado ao Bradesco, utilizando Angular 13 para a estrutura do front-end e SASS para estilização. O processo contou com GitFlow para controle de versão e CI/CD com Jenkins para automatizar deploys, além de testes automatizados com Jest para garantir a qualidade do código.',
         images: [
+            "assets/img/bradesco.jpg"
+        ],
+        imgSize: 'small',
+        technologies: [
+            'Angular 13',
+            'SASS',
+            'CI/CD',
+            'Jest',
+            'GitFlow'
+        ],
+        githubUrl: '/',
+        demoUrl: '/'
+    },
+    {
+        id: 'okn',
+        title: 'OKN',
+        description: 'Atuei fazendo manutenção de portais de notícias da rede ITMidia com Wordpress(PHP), construção de plugins com Javascript, Embedded Google Ads, construção e estilização de landing pages com HTML e Sass. Desenvolvimento do portal da oxfam.org.br (Wordpress e Javascript). Estilização com CSS e Scss de paginas e portais utilizando o padrão BEM.',
+        images: [
+            "assets/img/okngroup_logo.jpeg",
             "assets/img/itmidia.jpg",
             "assets/img/rede-itmidia.png"
         ],
@@ -122,9 +123,9 @@ export const PROJECTS_DATA: ProjectDetails[] = [
     {
         id: 'hapin-platforms',
         title: 'Plataformas Hapin',
-        description: 'Desenvolvimento do website Hapin, com funcionalidades dedicadas a candidatos e plataformas internas, utilizando NodeJS e MongoDB.',
+        description: 'Pude participar como aprendiz de Full-Stack em um projeto do setor de recrutamento e seleção, construído com a Stack MEAN, fui capaz de contribuir positivamente para o projeto na construção de pequenas features no Front-End(Angular 4, SASS, Typescript) e no BackEnd(Node e Express), correções de bugs e versionamento de código (GIT).',
         images: [
-            "assets/img/fcamara.jpg"
+            "assets/img/grupofcamara_logo.jpeg"
         ],
         imgSize: 'small',
         technologies: [
