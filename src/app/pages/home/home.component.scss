@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    scale: .5;
+  } 
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
 .home {
   min-height: 100vh;
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
@@ -14,7 +23,6 @@
     gap: 0.5rem;
     opacity: 0.7;
     animation: bounce 2s infinite;
-    
     span {
       font-size: 0.9rem;
       letter-spacing: 2px;
@@ -29,7 +37,6 @@
     text-align: center;
     padding: 2rem;
     position: relative;
-    
     .title {
       font-size: 4rem;
       font-weight: 700;
@@ -39,7 +46,6 @@
       -webkit-text-fill-color: transparent;
       animation: fadeInDown 1s ease-out;
     }
-    
     .subtitle {
       font-size: 1.5rem;
       font-weight: 300;
@@ -47,36 +53,25 @@
       opacity: 0.8;
       animation: fadeInUp 1s ease-out 0.5s both;
     }
-
+  }
 }
-}
-
 .about-me {
-  // background: linear-gradient(-315deg, #1a1a1a 0%, #2d2d2d 100%);
   background-image: url('/assets/img/wave-bg.jpg');
   background-attachment: fixed;
-  // filter: grayscale(1);
-  // height: calc(200vh - 4rem);
   padding: 2rem;
   position: relative;
-//   &::before {
-//     background-image: url('/assets/img/wave-bg.jpg');
-//     // filter: brightness(0.9) grayscale(1);
-//     z-index: -1;
-//     position: absolute;
-//     content: '';
-//     top: 0;
-//     left: 0;
-//     height: 100%;
-//     width: 100%;
-//     background-attachment: fixed;
-// }
   .title {
     font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
     color: #ddd;
-  }
+}
+
+.text, img {
+  animation: fadeIn ease-in-out;
+  animation-timeline: view();
+  animation-range: entry 0 cover 35%;
+}
   .wrapper {
     display: flex;
     padding: 0 6rem;
@@ -108,21 +103,36 @@
 
     .card {
       width: 400px;
-      // border: 1px solid #1c1667;
       padding: 1.5rem;
-    backdrop-filter: blur(10px);
-
+      backdrop-filter: blur(10px);
       border-radius: 10px;
       margin-bottom: 2rem;
       background: linear-gradient(135deg, #0e0e0e, #011222);
-      opacity: 0.9;
-      transform: translateX(40%);
       position: relative;
       transition: transform .3s ease;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       cursor: pointer;
-      &:hover {
-        transform: translateX(40%) scale(1.05);
+      @keyframes scrollRight {
+        from {
+          opacity: 0;
+          transform: translateX(0)
+        } 
+        to {
+          opacity: .9;
+          transform: translateX(40%);
+
+        }
+      }
+      @keyframes scrollLeft {
+        from {
+          opacity: 0;
+          transform: translateX(0)
+        } 
+        to {
+          opacity: .9;
+          transform: translateX(-40%);
+
+        }
       }
       &:not(:last-child)::after {
         content: '';
@@ -133,7 +143,19 @@
         bottom: -32px;
         background-color: #011222;
       }
+      &:nth-child(2n - 1) {
+        animation: scrollRight linear;
+        animation-timeline: view();
+        animation-range: entry 0 cover 40%;
+        transform: translateX(40%);
+        &:hover {
+          transform: translateX(40%) scale(1.05);
+        }
+      }
       &:nth-child(2n) {
+        animation: scrollLeft linear;
+        animation-timeline: view();
+        animation-range: entry 0 cover 40%;
         transform: translateX(-40%);
         &:hover {
           transform: translateX(-40%) scale(1.1);
@@ -171,7 +193,6 @@
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  // overflow: hidden;
   padding: 2rem 2rem 4rem;
   margin: 0 auto;
   .title {
@@ -193,16 +214,24 @@
   }
 
   .project-description {
-    font-size: 16px; /* Tamanho da fonte */
-    color: #fff; /* Cor do texto */
-    line-height: 1.5; /* Espaçamento entre linhas */
-    margin: 15px 0; /* Margens superior e inferior */
-    padding: 10px; /* Preenchimento interno */
-    background-color: #121212; /* Cor de fundo */
-    border-left: 4px solid #007bff; /* Borda à esquerda */
-    border-radius: 5px; /* Bordas arredondadas */
-}
- 
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.5;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #121212;
+    border-left: 4px solid #007bff;
+    border-radius: 5px;
+  }
+  @keyframes scrollBottom {
+    from {
+      transform: translateY(-150%)
+    } 
+    to {
+      transform: translateY(0);
+
+    }
+  }
   .project-card {
     cursor: pointer;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
@@ -213,7 +242,7 @@
     backdrop-filter: blur(10px);
     border: 5px solid #3498db;
     border-radius: 50%;
-    transition: transform .3s ease, box-shadow 0.3s ease;
+    transition: transform .3s ease, box-shadow 0.3s ease, opacity .3s ease, scale .3s ease;
     position: relative;
     .project-title {
         font-size: 1rem;
@@ -222,9 +251,13 @@
         background: linear-gradient(45deg, #3498db, #2ecc71);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: fadeInDown 1s ease-out;
-        visibility: hidden;
         bottom: -50px;
+        opacity: 0;
+        animation: fadeIn linear;
+        animation-timeline: view();
+        animation-range: entry 0 cover 30%;
+        animation-fill-mode: forwards;
+
         white-space: nowrap;
         text-align: center;
         position: absolute;
@@ -237,19 +270,7 @@
       height: 100px;
       border-radius: 50%;
       object-fit: cover;
-      // overflow: hidden;
       margin: auto;
-    }
-    &:hover {
-      // transform: translateY(-5px);
-      transform: scale(120%);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: column;
-      & > .project-title {
-        visibility: visible;
-      }
-
     }
     &:nth-child(2n){
         position: relative;
@@ -260,30 +281,36 @@
         }
         &:hover {
         transform: translateY(-100%) scale(120%);
-
       }
+    }
+    &:nth-child(2n-1){
+      &:hover {
+        scale: 120%; 
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+      }
+      transform: translateY(-150%);
+      animation: scrollBottom ease-in-out;
+      animation-timeline: view();
+      animation-range: entry 0 cover 50%;
+      animation-fill-mode: forwards;
     }
   
   }
   ::-webkit-scrollbar {
-    width: 10px;  /* Largura da scrollbar vertical */
-    height: 10px; /* Altura da scrollbar horizontal */
+    width: 10px;
+    height: 10px;
   }
-  
-  /* Estiliza o fundo da scrollbar */
   ::-webkit-scrollbar-track {
     background: #888;
     border-radius: 10px;
   }
-  
-  /* Estiliza a "alça" (parte que o usuário arrasta) */
   ::-webkit-scrollbar-thumb {
     background: #3498db;
     border-radius: 10px;
     width: 70vh;
   }
-  
-  /* Altera a cor da alça ao passar o mouse */
   ::-webkit-scrollbar-thumb:hover {
     background: #2ecc71;
   }
@@ -483,12 +510,17 @@
             bottom: unset;
           }
           &:hover {
-            transform: translatey(50%);
+            transform: translateY(50%);
   
         }
       }
+      &:nth-child(2n-1) {
+        transform: unset !important;
+        animation: none !important;
+      }
       .project-title{
         font-size: 1rem;
+        visibility: hidden;
       }
       img {
         max-height: 80px;
@@ -510,7 +542,7 @@
 
   .about-me {
     height: unset;
-    padding: 1rem;
+    padding: 1rem 1rem 5rem;
     z-index: 2;
     .wrapper{
       padding: 0 0 1rem;
@@ -523,6 +555,10 @@
           text-align: center;
         }
       }
+      .text, img {
+        animation-range: entry 0 cover 45%;
+
+      }
     }
     .whatido {
       padding: 1rem;
@@ -532,6 +568,10 @@
       &-list {
         margin-top: 2rem;
         .card {
+          animation: fadeIn linear;
+          animation-range: entry 0 cover 60%;
+      animation-fill-mode: forwards;
+
           transform: unset !important;
           max-width: 100%;
         }
@@ -539,11 +579,20 @@
     }
   }
 }
+@keyframes contactRight {
+  from {
+    left: -50px
+  } 
+  to {
+    left: 0;
 
+  }
+}
 .contact {
   position: fixed;
+  animation: contactRight 1s linear;
+  animation-fill-mode: forwards;
   top: 20%;
-  left: 0;
   height: 200px;
   width: 50px;
   border-top-right-radius: 20px;
