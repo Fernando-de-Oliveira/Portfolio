@@ -568,12 +568,12 @@
       &-list {
         margin-top: 2rem;
         .card {
-          animation: fadeIn linear;
-          animation-range: entry 0 cover 60%;
-      animation-fill-mode: forwards;
-
           transform: unset !important;
           max-width: 100%;
+          animation: fadeIn linear !important;
+          animation-timeline: view() !important;
+          animation-range: entry 0 cover 40% !important;
+          animation-fill-mode: forwards !important;
         }
       }
     }
@@ -590,7 +590,7 @@
 }
 .contact {
   position: fixed;
-  animation: contactRight 1s linear;
+  animation: contactRight 1rs linear;
   animation-fill-mode: forwards;
   top: 20%;
   height: 200px;
