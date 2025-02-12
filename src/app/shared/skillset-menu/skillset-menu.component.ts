@@ -89,9 +89,9 @@ getSkillPosition(index: number): string {
     const screenWidth = window.innerWidth;
   
     if (screenWidth < 768) {
-      distance = 70; // Ajustar para telas pequenas (ex: mobile)
+      distance = 100; // Ajustar para telas pequenas (ex: mobile)
     } else if (screenWidth >= 768 && screenWidth < 1024) {
-      distance = 110; // Ajustar para tablets e telas médias
+      distance = 100; // Ajustar para tablets e telas médias
     }
   
     return `rotate(${angle}deg) translate(${distance}px) rotate(-${angle}deg)`;
