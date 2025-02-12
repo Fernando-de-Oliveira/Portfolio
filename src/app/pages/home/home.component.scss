@@ -484,51 +484,7 @@
   }
 }
 
-@media (max-width: 768px) {
-
-  .projects {
-    height: 100vh;
-    padding: 0 1rem;
-    .title {
-      margin: 2rem 0;
-    }
-    .wrapper{
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      display: flex;
-      gap: 10px;
-      padding: 0 0 5rem;
-    }
-    .project-card {
-      width: 80px;
-      &:nth-child(2n){
-          position: relative;
-          transform: unset;
-          .project-title {
-            top: -30px;
-            bottom: unset;
-          }
-          &:hover {
-            transform: translateY(50%);
-  
-        }
-      }
-      &:nth-child(2n-1) {
-        transform: unset !important;
-        animation: none !important;
-      }
-      .project-title{
-        font-size: 1rem;
-        visibility: hidden;
-      }
-      img {
-        max-height: 80px;
-
-      }
-    }
-  }
-  
+@media (max-width: 768px) {  
   .home {
    .hero {
      .title {
@@ -613,5 +569,66 @@
         transform: scale(1.1) rotate(-10deg);
       }
     }
+  }
+}
+
+@media (max-width: 1280px) {
+
+  .projects {
+    height: 100vh;
+    padding: 0 1rem;
+    .title {
+      margin: 2rem 0;
+    }
+    .wrapper{
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      gap: 10px;
+      padding: 0 0 5rem;
+    }
+    .project-card {
+      width: 80px;
+      &:nth-child(2n){
+          position: relative;
+          transform: unset;
+          .project-title {
+            top: -30px;
+            bottom: unset;
+          }
+          &:hover {
+            transform: translateY(50%);
+        }
+      }
+      &:nth-child(2n-1) {
+        transform: unset !important;
+        animation: none !important;
+      }
+      .project-title{
+        font-size: 1rem;
+        visibility: hidden;
+      }
+      img {
+        max-height: 80px;
+      }
+    }
+  }
+}
+
+.skills {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 2rem;
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ddd;
+}
+  .wrapper {
+    padding: 1rem 0;
+    width: fit-content;
+    margin: 0 auto;
   }
 }

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectDetails, PROJECTS_DATA } from '../../consts/projectsConsts';
+import { SkillsetMenuComponent } from "../../shared/skillset-menu/skillset-menu.component";
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule],
+  imports: [CommonModule, SkillsetMenuComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

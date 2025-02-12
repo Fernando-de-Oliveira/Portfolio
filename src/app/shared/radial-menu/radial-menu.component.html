@@ -1,0 +1,21 @@
+<div class="radial-menu">
+    <div class="row">
+        <img [src]="skill.icon" [alt]="skill.name" >
+        <h2>{{ skill.name }}</h2>
+    </div>
+    <p>{{ skill.description }}</p>
+    <ul>
+        <li *ngFor="let exp of skill.experiences">{{ exp }}</li>
+    </ul>
+    <h3>Domínio:</h3>
+    <div class="rating">
+        <span *ngFor="let lvl of skill.levels" [class]="'star ' + lvl">&#9733;</span>
+
+
+        <!-- <span class="star full">&#9733;</span>
+        <span class="star full">&#9733;</span>
+        <span class="star half">&#9733;</span>
+        <span class="star empty">&#9733;</span> -->
+      </div>
+      
+</div>

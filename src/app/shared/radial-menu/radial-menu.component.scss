@@ -1,0 +1,81 @@
+  
+  .radial-menu {
+    background: #222;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #0e0e0e, #011222);
+    cursor: pointer;
+    * {
+        color:#ddd;
+    }
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    img {
+        max-height: 100px;
+    }
+    h2 {
+        font-size: 1.5rem;
+        display: none;
+    }
+    h3 {
+        font-size: 1rem;
+        margin-bottom: .5rem;
+    }
+    p {
+        text-align: left;
+    }
+
+    ul {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+    }
+  }
+  
+  .rating {
+    display: inline-block;
+    font-size: 2rem;  /* Tamanho das estrelas */
+  }
+  .star {
+    position: relative;
+  }
+  .star.full {
+    color: #ffd700;  /* Cor das estrelas cheias (amarelo) */
+  }
+  
+  .star.empty {
+    color: #ccc;  /* Cor das estrelas vazias (cinza claro) */
+  }
+  
+  .star.half::before {
+    content: '\2605'; /* Código da estrela cheia */
+    position: absolute;
+    width: 50%;  /* Preenche 50% da estrela */
+    overflow: hidden;
+    color: #ffd700;  /* Cor dourada para a parte cheia */
+    left: 0;
+  }
+  
+  .star.half {
+    color: #ccc;  /* Cor da estrela vazia */
+  }
+  @media (max-width: 768px) {
+  
+    .radial-menu {
+        img {
+            max-height: 50px;
+        }
+        p{
+            font-size: .9rem;
+        }
+    }
+}

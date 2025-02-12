@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="skills-container">
+      <div (click)="openRadialMenu(skill)" class="skill" *ngFor="let skill of skills; let i = index" [style.transform]="getSkillPosition(i)">
+        <img [src]="skill.icon" [alt]="skill.name" 
+        >
+      </div>
+  </div>
+  
+  <!-- Menu Radial (Abre ao clicar) -->
+   <div class="radial-menu">
+     <app-radial-menu *ngIf="selectedSkill" [skill]="selectedSkill"></app-radial-menu>
+   </div>
+
+</div>  

@@ -1,0 +1,90 @@
+$primary-color: #121212;
+$secondary-color: #1f1f1f;
+$highlight-color: #88CE02;
+$text-color: #ffffff;
+$border-radius: 50%;
+$default-size: 340px; // Tamanho padrão
+
+.wrapper {
+  position: relative;
+}
+
+.skills-container {
+  position: relative;
+  width: $default-size;
+  height: $default-size;
+  margin: auto;
+  border-radius: $border-radius;
+  background: radial-gradient(circle, $secondary-color 30%, $primary-color 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  padding: .5rem; // Adiciona o padding de 1rem para o círculo
+
+  // Responsividade
+  @media (max-width: 1024px) {
+    width: calc(#{$default-size} - 2rem);  // Ajusta o tamanho para telas menores
+    height: calc(#{$default-size} - 2rem);
+  }
+
+  @media (max-width: 768px) {
+    width: calc(#{$default-size} - 4rem);  // Ajusta ainda mais para telas pequenas
+    height: calc(#{$default-size} - 4rem);
+  }
+  .skill {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: $primary-color;
+    border-radius: $border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-out, background 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+
+    img {
+      width: 50%;
+      height: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      background: $highlight-color;
+      transform: scale(1.2);
+      
+      img {
+        transform: rotate(-30deg);
+      }
+    }
+  }
+}
+.radial-menu {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateX(-105%) translateY(-50%);
+}
+// Responsividade
+@media (max-width:1280px) {
+  .radial-menu {
+    position: relative;
+    top: unset;
+    left: 0;
+    bottom: 0;
+    transform: unset;
+    margin-top: 1rem;
+  }
+  .skills-container {
+    width: 200px;
+    height: 200px;
+
+    .skill {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
