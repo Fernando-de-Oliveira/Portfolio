@@ -1,5 +1,5 @@
-$primary-color: #121212;
-$secondary-color: #1f1f1f;
+$primary-color: #0e0e0e;
+$secondary-color: #011222;
 $highlight-color: #88CE02;
 $text-color: #ffffff;
 $border-radius: 50%;
@@ -15,7 +15,9 @@ $default-size: 340px; // Tamanho padrão
   height: $default-size;
   margin: auto;
   border-radius: $border-radius;
-  background: radial-gradient(circle, $secondary-color 30%, $primary-color 100%);
+  background: radial-gradient(circle, $primary-color 30%, $secondary-color 100%);
+  // background: linear-gradient(135deg, #0e0e0e, #011222);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,7 +39,7 @@ $default-size: 340px; // Tamanho padrão
     position: absolute;
     width: 80px;
     height: 80px;
-    background: $primary-color;
+    background: $secondary-color;
     border-radius: $border-radius;
     display: flex;
     align-items: center;
@@ -47,16 +49,16 @@ $default-size: 340px; // Tamanho padrão
     cursor: pointer;
 
     img {
-      height: 60%;
+      height: 75%;
       transition: transform 0.3s ease;
     }
 
     &:hover {
-      background: $highlight-color;
+      background: linear-gradient(135deg, #3498db, #2ecc71);
       transform: scale(1.2);
       
       img {
-        transform: rotate(-30deg);
+        transform: rotate(-20deg);
       }
     }
   }

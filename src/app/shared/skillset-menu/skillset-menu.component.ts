@@ -43,22 +43,38 @@ skills = [
       description: 'JavaScript é a linguagem central para a maioria dos projetos que trabalho. Sua flexibilidade e a enorme comunidade de desenvolvedores fazem dele uma escolha poderosa para qualquer aplicação web moderna.', 
       experiences: ['oxfam.org.br', 'itmidia.com.br'] 
   },
+  // { 
+  //     index: 4, 
+  //     levels:['full','full','full','full','full',],
+  //     name: 'HTML5', 
+  //     icon: 'assets/icons/html5.png', 
+  //     description: 'HTML5 é o alicerce de qualquer site que desenvolvo. Ele fornece a estrutura fundamental para o conteúdo, e a evolução dessa tecnologia tem sido essencial para criar experiências mais ricas e interativas na web.', 
+  //     experiences: ['Menu de Dados Cadastrais (Bradesco)', 'Hapin (FCamara)'] 
+  // },
+  // { 
+  //     index: 5, 
+  //     levels:['full','full','full','full','full',],
+  //     name: 'CSS3', 
+  //     icon: 'assets/icons/css3.png', 
+  //     description: 'CSS3 é crucial para criar uma experiência visual de qualidade. Com ele, consigo garantir que as interfaces fiquem bonitas e funcionais, proporcionando uma navegação agradável e intuitiva.', 
+  //     experiences: ['Seção de Extrato (Bradesco)', 'MarketPlace SkyTech Solutions'] 
+  // },
   { 
-      index: 4, 
-      levels:['full','full','full','full','full',],
-      name: 'HTML5', 
-      icon: 'assets/icons/html5.png', 
-      description: 'HTML5 é o alicerce de qualquer site que desenvolvo. Ele fornece a estrutura fundamental para o conteúdo, e a evolução dessa tecnologia tem sido essencial para criar experiências mais ricas e interativas na web.', 
-      experiences: ['Menu de Dados Cadastrais (Bradesco)', 'Hapin (FCamara)'] 
-  },
-  { 
-      index: 5, 
-      levels:['full','full','full','full','full',],
-      name: 'CSS3', 
-      icon: 'assets/icons/css3.png', 
-      description: 'CSS3 é crucial para criar uma experiência visual de qualidade. Com ele, consigo garantir que as interfaces fiquem bonitas e funcionais, proporcionando uma navegação agradável e intuitiva.', 
-      experiences: ['Seção de Extrato (Bradesco)', 'MarketPlace SkyTech Solutions'] 
-  },
+    index: 4, 
+    levels: ['full', 'full', 'full', 'empty', 'empty'], 
+    name: 'Webpack', 
+    icon: 'assets/icons/webpack.png', 
+    description: 'Webpack é uma ferramenta essencial para otimizar o desempenho das minhas aplicações. Com ele, consigo modularizar, minificar e gerenciar dependências de forma eficiente, garantindo builds rápidos e organizados.', 
+    experiences: ['Pagé Express', 'MarketPlace SkyTech Solutions'] 
+},
+{ 
+    index: 5, 
+    levels: ['full', 'full', 'full', 'half', 'empty'], 
+    name: 'Jest', 
+    icon: 'assets/icons/jest.png', 
+    description: 'Jest me permite escrever testes eficientes e confiáveis para aplicações frontend. Com sua abordagem simples e poderosa, consigo garantir a qualidade do código e evitar regressões.', 
+    experiences: ['Seção de Extrato (Bradesco)', 'Menu de Dados Cadastrais (Bradesco)'] 
+},
   { 
       index: 6, 
       levels:['full','full','full','full','full',],

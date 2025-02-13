@@ -526,10 +526,15 @@
         .card {
           transform: unset !important;
           max-width: 100%;
+          padding: 1rem;
           animation: fadeIn linear !important;
           animation-timeline: view() !important;
           animation-range: entry 0 cover 40% !important;
           animation-fill-mode: forwards !important;
+          h3 {
+            font-size: 1.2rem;
+            font-weight: 500;
+          }
         }
       }
     }
@@ -575,7 +580,7 @@
 @media (max-width: 1280px) {
 
   .projects {
-    height: 100vh;
+    height: 80vh;
     padding: 0 1rem;
     .title {
       margin: 2rem 0;
@@ -589,7 +594,13 @@
       padding: 0 0 5rem;
     }
     .project-card {
-      width: 80px;
+      width: 20vw;
+      height: 20vw;
+    // border: 10px solid #3498db;
+      img {
+        height: 20vw;
+        max-height: unset;
+      }
       &:nth-child(2n){
           position: relative;
           transform: unset;
@@ -608,9 +619,6 @@
       .project-title{
         font-size: 1rem;
         visibility: hidden;
-      }
-      img {
-        max-height: 80px;
       }
     }
   }
