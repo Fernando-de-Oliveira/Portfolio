@@ -609,7 +609,7 @@
             bottom: unset;
           }
           &:hover {
-            transform: translateY(50%);
+            transform: scale(1.2);
         }
       }
       &:nth-child(2n-1) {
@@ -620,6 +620,11 @@
         font-size: 1rem;
         visibility: hidden;
       }
+    }
+  }
+  .about-me {
+    .wrapper {
+      padding: 0 3rem;
     }
   }
 }
