@@ -16,8 +16,9 @@ $default-size: 340px; // Tamanho padrão
   margin: auto;
   border-radius: $border-radius;
   background: radial-gradient(circle, $primary-color 30%, $secondary-color 100%);
-  // background: linear-gradient(135deg, #0e0e0e, #011222);
 
+  // background: linear-gradient(135deg, #0e0e0e, #011222);
+  transition: transform 3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,17 +50,13 @@ $default-size: 340px; // Tamanho padrão
     cursor: pointer;
 
     img {
-      height: 75%;
-      transition: transform 0.3s ease;
+      height: 70%;
+      transition: transform 3s ease; 
     }
-
+    
     &:hover {
       background: linear-gradient(135deg, #3498db, #2ecc71);
       transform: scale(1.2);
-      
-      img {
-        transform: rotate(-20deg);
-      }
     }
   }
 }
@@ -78,6 +75,7 @@ $default-size: 340px; // Tamanho padrão
     bottom: 0;
     transform: unset;
     margin-top: 1rem;
+    padding-bottom: 3rem;
   }
   .skills-container {
     width: 280px;

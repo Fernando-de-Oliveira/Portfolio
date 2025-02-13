@@ -1,11 +1,12 @@
 <div class="wrapper">
-  <div class="skills-container">
+  <div #container class="skills-container">
     <div (click)="toggleRadialMenu(skill)" class="skill" *ngFor="let skill of skills; let i = index"
       [style.transform]="getSkillPosition(i)">
-      <img [src]="skill.icon" [alt]="skill.name">
+      <img #circle class="circle" [src]="skill.icon" [alt]="skill.name">
     </div>
   </div>
   <div class="radial-menu">
     <app-radial-menu *ngIf="selectedSkill" [skill]="selectedSkill"></app-radial-menu>
   </div>
+  <div #lastRow class="last-row"></div>
 </div>
