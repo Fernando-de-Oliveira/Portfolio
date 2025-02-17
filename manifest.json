@@ -1,0 +1,16 @@
+{
+    "name": "Fernando Laurino Portfolio",
+    "short_name": "Portfolio",
+    "icons": [
+      {
+        "src": "/public/favicon.ico",
+        "sizes": "256x248",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#2d2d2d",
+    "theme_color": "#1a1a1a"
+  }
+  

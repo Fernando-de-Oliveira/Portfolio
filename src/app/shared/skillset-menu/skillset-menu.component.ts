@@ -35,15 +35,6 @@ getSkillPosition(index: number): string {
 }
 angleStep = 360 / 8;
 
-  getIconPosition(index: number) {
-    const angle = (360 / this.skills.length) * index;
-    const radius = 100;
-    return {
-      top: `${50 + radius * Math.sin((angle * Math.PI) / 180)}%`,
-      left: `${50 + radius * Math.cos((angle * Math.PI) / 180)}%`,
-    };
-  }
-
   toggleRadialMenu(skill: any) {
 
     let rotationAngle = 0;
